@@ -60,6 +60,9 @@
 		AB635F95296D5F89003C52E2 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F69296D5F89003C52E2 /* Matrix.swift */; };
 		AB635F96296D5F89003C52E2 /* FFNN+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F6A296D5F89003C52E2 /* FFNN+Metal.swift */; };
 		AB635F98296D730D003C52E2 /* SpheroSensorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F97296D730D003C52E2 /* SpheroSensorControl.swift */; };
+		EDF59FCF29703DB700F4739F /* BLEObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF59FCC29703DB600F4739F /* BLEObservable.swift */; };
+		EDF59FD029703DB700F4739F /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF59FCD29703DB700F4739F /* BLEController.swift */; };
+		EDF59FD129703DB700F4739F /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF59FCE29703DB700F4739F /* BLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,9 @@
 		AB635F69296D5F89003C52E2 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		AB635F6A296D5F89003C52E2 /* FFNN+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFNN+Metal.swift"; sourceTree = "<group>"; };
 		AB635F97296D730D003C52E2 /* SpheroSensorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroSensorControl.swift; sourceTree = "<group>"; };
+		EDF59FCC29703DB600F4739F /* BLEObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservable.swift; sourceTree = "<group>"; };
+		EDF59FCD29703DB700F4739F /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		EDF59FCE29703DB700F4739F /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +192,8 @@
 		AB635F04296D5EF2003C52E2 /* Symbiose_freq */ = {
 			isa = PBXGroup;
 			children = (
+				EDF59FCB29703D2100F4739F /* BLE */,
 				AB635F32296D5F89003C52E2 /* Sphero */,
-				AB635F31296D5F70003C52E2 /* New Group */,
 				AB635F2F296D5F1B003C52E2 /* ToneOutputUnit.swift */,
 				AB635F05296D5EF2003C52E2 /* Symbiose_freqApp.swift */,
 				AB635F07296D5EF2003C52E2 /* ContentView.swift */,
@@ -220,13 +226,6 @@
 				AB635F22296D5EF3003C52E2 /* Symbiose_freqUITestsLaunchTests.swift */,
 			);
 			path = Symbiose_freqUITests;
-			sourceTree = "<group>";
-		};
-		AB635F31296D5F70003C52E2 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		AB635F32296D5F89003C52E2 /* Sphero */ = {
@@ -377,6 +376,16 @@
 			path = NeuralNet;
 			sourceTree = "<group>";
 		};
+		EDF59FCB29703D2100F4739F /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				EDF59FCE29703DB700F4739F /* BLEManager.swift */,
+				EDF59FCC29703DB600F4739F /* BLEObservable.swift */,
+				EDF59FCD29703DB700F4739F /* BLEController.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -507,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF59FD029703DB700F4739F /* BLEController.swift in Sources */,
 				AB635F98296D730D003C52E2 /* SpheroSensorControl.swift in Sources */,
 				AB635F89296D5F89003C52E2 /* CollisionData.swift in Sources */,
 				AB635F71296D5F89003C52E2 /* SpheroV1Toy.swift in Sources */,
@@ -532,6 +542,7 @@
 				AB635F84296D5F89003C52E2 /* ShouldActionCompleteResponse.swift in Sources */,
 				AB635F7E296D5F89003C52E2 /* Color+Utils.swift in Sources */,
 				AB635F8B296D5F89003C52E2 /* CommandV1Sequencer.swift in Sources */,
+				EDF59FCF29703DB700F4739F /* BLEObservable.swift in Sources */,
 				AB635F6B296D5F89003C52E2 /* SharedToyBox.swift in Sources */,
 				AB635F90296D5F89003C52E2 /* Random.swift in Sources */,
 				AB635F7D296D5F89003C52E2 /* ToyBox.swift in Sources */,
@@ -542,6 +553,7 @@
 				AB635F7F296D5F89003C52E2 /* SensorUtils.swift in Sources */,
 				AB635F08296D5EF2003C52E2 /* ContentView.swift in Sources */,
 				AB635F8F296D5F89003C52E2 /* Storage.swift in Sources */,
+				EDF59FD129703DB700F4739F /* BLEManager.swift in Sources */,
 				AB635F8E296D5F89003C52E2 /* String+Utils.swift in Sources */,
 				AB635F75296D5F89003C52E2 /* BB9EToy.swift in Sources */,
 				AB635F79296D5F89003C52E2 /* SpheroV2ToyCore.swift in Sources */,
@@ -727,7 +739,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jonathan.Slider;
+				PRODUCT_BUNDLE_IDENTIFIER = Jonathan.Symbiose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -757,7 +769,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Jonathan.Slider;
+				PRODUCT_BUNDLE_IDENTIFIER = Jonathan.Symbiose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
