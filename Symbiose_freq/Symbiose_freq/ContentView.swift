@@ -45,6 +45,9 @@ struct ContentView: View {
                 spheroSensorControl.load()
                 myUnit.enableSpeaker()
             }
+            if newValue == "reset" {
+                spheroSensorControl.load()
+            }
             
             if newValue == "endact3" {
                 myUnit.stop()
