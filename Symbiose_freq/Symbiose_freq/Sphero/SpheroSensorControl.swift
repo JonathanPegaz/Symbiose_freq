@@ -25,7 +25,7 @@ class SpheroSensorControl: ObservableObject{
     @Published var valueSphero: Float = 0.0
     
     @Published var orientation: Float = 0.0
-
+    @Published var isShaking: Bool = false
     
     func load() {
 
@@ -57,8 +57,13 @@ class SpheroSensorControl: ObservableObject{
 
                         self.dataToDisplay = [acceleration.x!, acceleration.y!, acceleration.z!]
 //                        print(self.dataToDisplay)
-                        let absSum: Float = Float(abs(acceleration.x!) + abs(acceleration.y!) + abs(acceleration.z!))
+                        var acc = Float(abs(acceleration.x!) + abs(acceleration.y!) + abs(acceleration.z!))
                         
+                        if (acc > 3) {
+                            self.isShaking = true
+                        } else {
+                            self.isShaking = false
+                        }
                         
                         
                         
